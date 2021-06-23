@@ -340,12 +340,10 @@ void delete (struct node **root, struct node *target)
 
 void inorder(struct node *root)
 {
-    static int last = 0;
     if (root == NULL)
         return;
     inorder(root->left_node);
     printf("%d ", root->value);
-    last = root->value;
     inorder(root->rigth_node);
 }
 
